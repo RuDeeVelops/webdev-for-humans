@@ -6,9 +6,11 @@ An ever-growing, non-comprehensive, terribly informal and opinionated list of in
 
 🕵️‍♀️ If you spot any mistake feel free to submit a PR. There's probably a bunch!
 
+<!--
+
+
 work on the action and js to pull dynamically list of js everytime a file is saved or created
 
-<!--
 name: Update README
 
 on:
