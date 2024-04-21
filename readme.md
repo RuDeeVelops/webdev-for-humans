@@ -1,6 +1,6 @@
-# 🚀 Javascript Insights for Human Beings
+# 🚀 Webdev Insights for Human Beings
 
-## 🧩 Nothing makes sense in JS.. untill it does!
+## 🧩 Nothing makes sense in Javascript.. untill it does!
 
 An ever-growing, non-comprehensive, terribly informal and opinionated list of insights that I struggled with on my journey through the wilds of Javascript. 🌲🌳.
 
