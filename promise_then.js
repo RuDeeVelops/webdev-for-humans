@@ -1,42 +1,33 @@
-// A Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It's capitalized because it's a constructor function used to create new Promise instances. It takes a callback function with two parameters: resolve and reject. The resolve and reject functions are used to resolve or reject the promise, respectively.
+// example from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises
+// key to understand Promises is to see them happening in realtime in the console of the browser.
+// Head over to example.org and open the console. Paste the code below and see what happens.
 
-new Promise((resolve, reject) => {
-  resolve("Success!");
-})
+// a fetch request returns a Promise object. The Promise is "pending" until the request completes and it is "fulfilled" or "rejected". When the Promise is fulfilled or rejected, the promise returns a Response object.
+const fetchPromise = fetch("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json");
 
-  // The promise.then() method is a Promise method used to handle the success case of a Promise. It takes a callback function that will be called when the Promise is resolved. In our case it's resolved with the string "Success!".
+console.log(fetchPromise);
+// we log the Promise object to the console to see what's happening in the promise.
+// the Promise will automatically resolve to a Response object once it completes the fetch request.
+// Expand the console and you will see that PromiseState is fullfilled and PromiseResult is a Response object.
+// What do we do with the result of the Promise, aka the Response object?
+// If you expand it in the console you can see there are many properties to access. Let's try and log the status property.
+// To do this we attach a event handler to the Promise object. We use .then on our Promise.
+// .then() can access the Response object of our Promise and do something with it.
+//.then() takes the Response object as argument once the Promise is fullfilled.
+// *********** IMPORTANT ***************
+// In layman's terms: .then() means "when the Promise is fulfilled, do this with its Response object".
 
-  .then((result) => {
-    return result + " Oh, yeah!";
-  })
-  .then((result) => {
-    return result + " Keep going!";
-  })
-  .then((result) => console.log(result)); // output: Success! Oh, yeah! Keep going!
-
-//.then() is a method inside Promise that takes two arguments: a callback for the success case and another for the failure case. Both are optional, so you can add a callback for the success or failure case only.
-
-// .then(successCallback, failureCallback);
-
-//.then() returns a new Promise, different from the original one, which allows you to chain multiple .then() methods together.
-
-let myPromise = new Promise(function (resolve, reject) {
-  let result = false;
-
-  if (result == true) {
-    resolve("Promise is resolved!");
-  } else {
-    reject("Promise is rejected!");
-  }
+fetchPromise.then((response) => {
+  console.log(`Received response: ${response.status}`);
 });
 
-// myPromise now contains a resolution or a rejection - we use then() to do something with that result and for both success and failure cases we ask the promise to log a message.
-myPromise.then(
-  (message) => logs(message),
-  (message) => logs(message)
-);
+console.log("Started request…");
 
-// Funtion to run when Promise is settled:
-function logs(something) {
-  console.log(something);
-}
+// From MDN:
+
+// 1 calling the fetch() API, and assigning the return value to the fetchPromise variable
+// 2 immediately after, logging the fetchPromise variable. This should output something like: Promise { <state>: "pending" }, telling us that we have a Promise object, and it has a state whose value is "pending". The "pending" state means that the fetch operation is still going on.
+// 3 passing a handler function into the Promise's then() method. When (and if) the fetch operation succeeds, the promise will call our handler, passing in a Response object, which contains the server's response.
+// 4 logging a message that we have started the request.
+
+// CONTINUES IN PART 2
