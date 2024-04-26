@@ -2,6 +2,23 @@
 // key to understand Promises is to see them happening in realtime in the console of the browser.
 // Head over to example.org and open the console. Paste the code below and see what happens.
 
+// This is how a Promise looks like:
+
+// +-----------------+
+// |  Promise Name   |
+// |  Promise        |
+// +-----------------+
+// |  Promise State  |
+// |  pending        |
+// |  fulfilled      |
+// |  rejected       |
+// +-----------------+
+// | Promise Result  |
+// |  value          |
+// |  undefined      |
+// |  error object   |
+// +-----------------+
+
 // a fetch request returns a Promise object. The Promise is "pending" until the request completes and it is "fulfilled" or "rejected". When the Promise is fulfilled or rejected, the promise returns a Response object.
 const fetchPromise = fetch("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json");
 
