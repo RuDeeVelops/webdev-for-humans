@@ -19,7 +19,18 @@ async function shuffleCards() {
 }
 
 // await can be used only inside an async function and with methods that return a promise.
+// since 2020 await can also be used as a top-level await in a module, this means that you can use await outside of an async function in a module.
 // await fetch returns a promise that resolves to the Response object
 // await response.json() returns a promise that resolves to the JSON object parsed from the response body.
-// does async function return a promise? Yes, it returns a promise that resolves to the value returned by the async function.
-// The code inside the async function is much cleaner and easier to read than the promise-based code.
+// At this point the async Promise is set to fullfilled even if no data is explicitly returned.
+// If we were to add return data then it would also output the data in its promiseResult property and can be passed forward.
+
+// Another more "template like" example:
+async function promise() {
+  const response = await fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature");
+  const jsonData = await response.json();
+  return jsonData;
+}
+console.log(promise());
+
+// CONTINUE TO PART 4 - ERROR HANDLING

@@ -1,0 +1,41 @@
+/*  Examples of CSS selectors descendent, child, adjacent sibling, general sibling
+
+ Descendent selector
+ Selects all <p> elements inside <div> elements */
+div p {
+  color: red;
+}
+
+/* Descendant selectors with classes and IDs
+    Selects all <p> elements inside <div> elements with class="myDiv" */
+
+div#myDiv p {
+  color: red;
+}
+
+div.myDiv p {
+  color: red;
+}
+
+/*  Example of usage in HTML
+<div id="myDiv">
+    <p>This is a paragraph inside a div</p>
+</div> */
+
+/*  Child selector
+ Selects all <p> elements that are children of <div> elements */
+div > p {
+  color: red;
+}
+
+/*  Adjacent sibling selector
+ Selects all <p> elements that are placed immediately after <div> elements */
+div + p {
+  color: red;
+}
+
+/* General sibling selector
+    Selects all <p> elements that are siblings of <div> elements */
+div ~ p {
+  color: red;
+}
