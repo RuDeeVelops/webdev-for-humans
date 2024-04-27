@@ -1,41 +1,91 @@
-/*  Examples of CSS selectors descendent, child, adjacent sibling, general sibling
+/* -------------------------------------------------------------------------- */
+/* Descendant Selector */
+/* Selects all <p> elements descendants of a <div> (i.e., children, grandchildren, etc.) */
+/* -------------------------------------------------------------------------- */
 
- Descendent selector
- Selects all <p> elements inside <div> elements */
 div p {
   color: red;
 }
 
-/* Descendant selectors with classes and IDs
-    Selects all <p> elements inside <div> elements with class="myDiv" */
-
-div#myDiv p {
+#myDiv p {
   color: red;
 }
 
-div.myDiv p {
+.myClass p {
   color: red;
 }
 
-/*  Example of usage in HTML
-<div id="myDiv">
-    <p>This is a paragraph inside a div</p>
-</div> */
+/* 
+Example:
+<div class="myClass">
+        <p>This paragraph will be red because it's a direct child of div.myClass.</p>
+        <div>
+                <p>This paragraph will also be red because it's a descendant (grandchild) of div.myClass.</p>
+        </div>
+</div>
+*/
 
-/*  Child selector
- Selects all <p> elements that are children of <div> elements */
+/* -------------------------------------------------------------------------- */
+/* Class/ID Selector Combined with Type Selector */
+/* Selects all p elements that have the class myClass. */
+/* -------------------------------------------------------------------------- */
+
+p.myClass {
+  color: red;
+}
+
+p#myID {
+  color: red;
+}
+
+/* 
+Example:
+<p class="myClass">This paragraph will be red because it has the class myClass.</p>
+*/
+
+/* -------------------------------------------------------------------------- */
+/* Child Selector */
+/* Selects all <p> elements that are children ONLY of <div> elements */
+/* -------------------------------------------------------------------------- */
+
 div > p {
   color: red;
 }
 
-/*  Adjacent sibling selector
- Selects all <p> elements that are placed immediately after <div> elements */
+/* 
+Example:
+<div>
+        <p>This paragraph will be blue because it's a direct child of a div.</p>
+</div>
+*/
+
+/* -------------------------------------------------------------------------- */
+/* Adjacent Sibling Selector */
+/* Selects all <p> elements that are placed immediately after <div> elements */
+/* -------------------------------------------------------------------------- */
+
 div + p {
   color: red;
 }
 
-/* General sibling selector
-    Selects all <p> elements that are siblings of <div> elements */
+/* 
+Example:
+<div></div>
+<p>This paragraph will be green because it's immediately after a div.</p>
+*/
+
+/* -------------------------------------------------------------------------- */
+/* General Sibling Selector */
+/* Selects all <p> elements that are siblings of <div> elements */
+/* -------------------------------------------------------------------------- */
+
 div ~ p {
   color: red;
 }
+
+/* 
+Example:
+<div></div>
+<p>This paragraph will be purple because it's a sibling of a div.</p>
+<p>This paragraph will also be purple because it's a sibling of a div.</p>
+*/
