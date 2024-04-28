@@ -89,3 +89,22 @@ Example:
 <p>This paragraph will be purple because it's a sibling of a div.</p>
 <p>This paragraph will also be purple because it's a sibling of a div.</p>
 */
+
+/* -------------------------------------------------------------------------- */
+/* Attribute Selector */
+/* Selects all elements with a specific attribute */
+/* -------------------------------------------------------------------------- */
+
+input[type="text"] {
+  color: red;
+}
+
+input[type="submit"] {
+  color: red;
+}
+
+/*
+Example:
+<input type="text" value="Name">
+<input type="submit" value="Submit">
+*/

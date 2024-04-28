@@ -1,0 +1,22 @@
+/* <div class="text-container">
+    <div class="text"><span>Text 1</span></div>
+    <div class="text"><span>Text 2</span></div>
+    <div class="text"><span>Text 3</span></div>
+    <!-- ... -->
+</div>
+ */
+
+/* example of the nth-of-type selector */
+/*It means "from a list of siblings, select the span element of nth sibling".*/
+
+.text:nth-of-type(1) span {
+  color: red;
+}
+
+.text:nth-of-type(2) span {
+  color: green;
+}
+
+.text:nth-of-type(3) span {
+  color: blue;
+}
