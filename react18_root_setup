@@ -1,4 +1,0 @@
-// In react 18, we can use createRoot to render the app
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(navbar);
