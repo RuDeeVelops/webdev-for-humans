@@ -1,4 +1,5 @@
 // In JSX, you can use curly braces to embed JavaScript expressions in your HTML code.
+// {} let us access JavaScript.
 // JSX
 
 function App() {
