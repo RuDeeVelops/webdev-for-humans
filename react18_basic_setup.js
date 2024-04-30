@@ -18,7 +18,7 @@ index.html
   |
   |__ index.js
         |
-        |__ app.jsx
+        |__ app.jsx (this is where we import the components and use them to build the app)
         |     |
         |     |__ components (various JSX components used in app.jsx)
         |
