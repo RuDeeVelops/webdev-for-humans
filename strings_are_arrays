@@ -1,0 +1,6 @@
+// little trick to access a character in a string
+// strings are seen as arrays of characters in javascript.
+
+let str = "hello";
+console.log(str[0]); // logs "h"
+console.log(str[1]); // logs "e"
