@@ -14,9 +14,9 @@ root.render(
 /*
 Here's an ASCII diagram of how app.jsx, index.css, index.js, index.html, app.css and components are connected. The diagram only shows top level information and doesn't go into detail about the components themselves.
 
-index.html
+index.html (root element with id="root" where the app is rendered)
   |
-  |__ index.js
+  |__ index.js (this file - we import react, ReactDOM, App and render the app in the root element)
         |
         |__ app.jsx (this is where we import the components and use them to build the app)
         |     |
