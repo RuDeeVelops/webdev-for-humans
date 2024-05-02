@@ -1,0 +1,111 @@
+<!-- Here's what you can have in a form in HTML -->
+
+<div class="formTwo">
+  <form action="submit.php" method="post">
+    <!-- Label and input field for name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <!-- Label and input field for email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <!-- Label and textarea for message -->
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <!-- Label and checkbox for subscribe -->
+    <label for="subscribe">Subscribe:</label>
+    <input type="checkbox" id="subscribe" name="subscribe" />
+
+    <!-- Label and radio buttons for subscribe -->
+    <label>Subscribe:</label>
+    <div class="radio-buttons">
+      <input type="radio" id="subscribe-yes" name="subscribe" value="yes" />
+      <label for="subscribe-yes">Yes</label>
+      <input type="radio" id="subscribe-no" name="subscribe" value="no" />
+      <label for="subscribe-no">No</label>
+    </div>
+
+    <!-- Label and textarea for country -->
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <!-- Label and dropdown for country -->
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+    </select>
+
+    <!-- Submit button for the form -->
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<!-- Let's quickly style with CSS the above forms-->
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Style the form container */
+  form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Style the form elements */
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Style the radio buttons */
+  .radio-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 2px solid #c5c0c0;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  /* Style the form elements when they are in focus */
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border: 2px solid #4caf50;
+  }
+</style>
