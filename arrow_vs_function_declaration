@@ -1,0 +1,30 @@
+// let's see a very simple example of function declaration and how we can rewrite as anonymous arrow functions.
+// arrow functions use a simplified syntax and are anonymous, which means they don't have a name.
+// arrow functions are always expressions, so they can be assigned to a variable.
+
+// function declaration
+function superman(name) {
+  return `${name} is here to save the day!`;
+}
+
+// arrow function
+(name) => {
+  return `${name} is here to save the day!`;
+};
+
+// one parameter, multiple lines of code
+(name) => {
+  return `${name} is here to save the day!`;
+};
+
+// one parameter, one line of code
+(name) => `${name} is here to save the day!`;
+
+// no parameters, only one line of code
+() => `Superman is here to save the day!`;
+
+// arrow functions particularities:
+// arrow functions do not have their own this keyword. They are not well suited for defining object methods.
+// arrow functions are best suited for non-method functions. for example, functions that are not attached to objects.
+// arrow functions are not hoisted, which means they cannot be called before they are defined.
+// arrow functions can be easily used as arguments to other functions.
