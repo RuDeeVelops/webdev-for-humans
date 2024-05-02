@@ -6,12 +6,12 @@ const name = "John";
 const username = name || "Guest";
 console.log(username); // John
 
-// short-circuit with AND && operator
+// short-circuit with AND && operator ("if name is truthy, assign name to username")
 const name = "John";
 const username = name && name;
 console.log(username); // John
 
-// ternary operator
+// ternary operator ("if name is truthy, assign name to username, otherwise assign 'Guest' to username")
 const name = "John";
 const username = name ? name : "Guest";
 console.log(username); // John
@@ -26,7 +26,7 @@ if (name) {
 }
 console.log(username); // John
 
-// switch statement
+// switch statement reads as follows: "if name is 'John', assign name to username, otherwise assign 'Guest' to username"
 const name = "John";
 let username;
 switch (name) {
@@ -37,6 +37,13 @@ switch (name) {
     username = "Guest";
 }
 console.log(username); // John
+
+// let's see how to flip a boolean value using the NOT ! operator
+
+// NOT ! operator flips the value of a boolean
+let isLogged = false;
+isLogged = !isLogged;
+console.log(isLogged); // true
 
 // difference between OR || and AND && operators
 // OR || operator returns the first truthy value or the last value if no truthy value is found

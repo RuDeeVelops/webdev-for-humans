@@ -1,0 +1,4 @@
+// NOT ! operator flips the value of a boolean
+let isLogged = false;
+isLogged = !isLogged;
+console.log(isLogged); // true
