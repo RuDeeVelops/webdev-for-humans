@@ -1,6 +1,6 @@
 <!-- Here's what you can have in a form in HTML -->
 
-<div class="formTwo">
+<div class="formOne">
   <form action="submit.php" method="post">
     <!-- Label and input field for name -->
     <label for="name">Name:</label>
@@ -50,6 +50,22 @@
   * {
     box-sizing: border-box;
   }
+
+  /* A good practice to maintain consistency in the form font size */
+
+  :root {
+    --form-font-size: 16px;
+  }
+
+  label,
+  input,
+  textarea,
+  select,
+  button {
+    font-size: var(--form-font-size); /* Use the variable for the font size */
+  }
+
+  /* End of the font size handling trick */
 
   /* Style the form container */
   form {

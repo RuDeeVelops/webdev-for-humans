@@ -1,0 +1,7 @@
+// We can use Math.Floorm Math.Random and .length to pick a random item from an array. A simple example:
+
+const myArray = ["one", "two", "three", "four", "five"];
+const randomItem = myArray[Math.floor(Math.random() * myArray.length)];
+console.log(randomItem);
+
+// This will log a random item from the array to the console. The Math.floor function rounds the number down to the nearest whole number, and Math.random generates a random number between 0 and 1. Multiplying this by the length of the array gives us a random index number, which we can then use to select an item from the array.
