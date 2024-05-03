@@ -1,4 +1,4 @@
 // NOT ! operator flips the value of a boolean
 let isLogged = false;
-isLogged = !isLogged;
+isLogged = !isLogged; // this reads as "whatever the value of isLogged is, flip it"
 console.log(isLogged); // true

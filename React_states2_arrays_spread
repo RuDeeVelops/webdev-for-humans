@@ -1,0 +1,30 @@
+// In React we don't wanna modify the original state, we wanna create a new state object and then update that. The reason for this is that React will only re-render the component if the state object has changed. If we modify the original state object, React will not re-render the component because it thinks that the state object has not changed. So we need to create a new state object and then update that.
+
+// This is particularly important when working with arrays or objects.
+// Let's see a simple example of how to update an array in state in React.
+
+import React, { useState } from "react";
+
+function MyComponent() {
+  const [items, setItems] = useState(["Item 1", "Item 2"]);
+
+  const handleClick = () => {
+    const newItems = [...items];
+    newItems.push(`Item ${newItems.length + 1}`);
+    setItems(newItems);
+  };
+
+  // now we can render each item as a single li element
+  return (
+    <div>
+      <button onClick={handleClick}>Add Item</button>
+      <ul>
+        {items.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default MyComponent;

@@ -8,7 +8,7 @@
 
 // CardsAll.js
 function CardsAll() {
-  // we write properties as custom HTML attributes
+  // we write properties as custom HTML attributes, REMEMBER THESE ARE CUSTOM ATTRIBUTES. So if I write onClick for example, it doesn't mean I'm using the onClick event listener... just that I'm writing an onClick property.
   return (
     <div className="contacts">
       <CardsSingle img="./images/mr-whiskerson.png" name="Mr. Whiskerson" phone="(212) 555-1234" email="mr.whiskaz@catnap.meow" />
