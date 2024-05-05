@@ -5,7 +5,7 @@
 // *********************
 // *********************
 //
-// Here's a simple basic example of of a counter in React (from Scrimba):
+// Here's a simple basic example of creating a simple counter in React (from Scrimba):
 // 1. We import the useState hook from React.
 // 2. The useState is our State. It's what will change.
 // 3. Since it's a counter we want to have an initial value of 0.
