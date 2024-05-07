@@ -1,6 +1,7 @@
-// Notes from Official React docs.
+// Notes from Official React docs examples.
 
-// Look for a prop called "whatever", store it into a same name constant, and display it in the button.
+// THIS IS HOW YOU WANNA READ A PROP when destructured:
+// 'Look for a prop called "whatever", store it into a same name constant, and display it in the button.'
 // We are using destructuring to access the props. This is a cleaner way to access props.
 
 function Square({ whatever }) {
