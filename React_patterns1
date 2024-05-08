@@ -1,0 +1,6 @@
+// "To update an array in state based on a condition, use
+setArrayState((prevArrayState) => prevArrayState.map((item) => (condition ? newItem : item)));
+
+// this means in plain English: "set the state to a new array where each item is the same as before except for the one that matches the condition, which should be replaced with a new item.
+
+/*-----------*/
