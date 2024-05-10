@@ -9,6 +9,7 @@ const person = {
 // Use destructuring to to extract values from objects and arrays and assign them to variables.
 // In this example, we are extracting the 'img' and 'name' properties from the 'person' object.
 // If I use the same name of the properties, the variables will be assigned the corresponding values from the 'person' object.
+// "LOOK FOR 'IMG, NAME' INSIDE THE OBJECT AND ASSIGN THEM TO SAME NAMED VARIABLES"
 const { img, name } = person;
 console.log(img); // "./images/mr-whiskerson.png"
 console.log(name); // "Mr. Whiskerson"

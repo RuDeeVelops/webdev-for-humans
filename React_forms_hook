@@ -1,0 +1,47 @@
+// the useForm hook is a custom hook that provides a way to interact with the form state and validation logic.
+
+import React from "react";
+import { useForm } from "react-hook-form";
+
+export default function Form() {
+  // Initialize useForm hook to access several methods (register, handleSubmit, errors) that we can use to interact with the form.
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  // Define the function that will be called when the form is submitted.
+  // The data parameter will contain all the form data.
+  const onSubmit = (data) => console.log(data);
+
+  return (
+    // handleSubmit only calls onSubmit if form is valid.
+    <form onSubmit={handleSubmit(onSubmit)}>
+      {/*The register function returns props that are spread onto the form field, connecting it to the form's state and validation logic.
+      The second parameter to register is an object that defines the validation rules for the field. */}
+      <input type="text" className="my-input-class" {...register("firstName", { required: "First name is required" })} placeholder="First Name" />
+      {errors.firstName && <p>{errors.firstName.message}</p>}
+
+      <input type="text" className="my-input-class" {...register("lastName", { required: "Last name is required" })} placeholder="Last Name" />
+      {errors.lastName && <p>{errors.lastName.message}</p>}
+
+      <input
+        type="email"
+        className="my-input-class"
+        {...register("email", { required: "Email is required", pattern: { value: /^\S+@\S+$/i, message: "Invalid email format" } })}
+        placeholder="Email"
+      />
+      {errors.email && <p>{errors.email.message}</p>}
+
+      <textarea className="my-textarea-class" {...register("comments")} placeholder="Comments" />
+
+      <input type="checkbox" className="my-checkbox-class" {...register("isFriendly")} />
+      <label htmlFor="isFriendly" className="my-label-class">
+        Are you friendly?
+      </label>
+
+      <input type="submit" className="my-submit-class" />
+    </form>
+  );
+}
