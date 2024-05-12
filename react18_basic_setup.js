@@ -11,6 +11,14 @@ root.render(
   </React.StrictMode>
 );
 
+// Another way:
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+const root = createRoot(document.querySelector("#root"));
+
+root.render(<App />);
+
 /*
 Here's an ASCII diagram of how app.jsx, index.css, index.js, index.html, app.css and components are connected. The diagram only shows top level information and doesn't go into detail about the components themselves.
 
