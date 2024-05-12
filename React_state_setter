@@ -1,0 +1,31 @@
+// When using states and useState in React remember that the state is immutable, so you can't change it directly. You have to use the setter function to change the state.
+// In the following example you cannot change "character" directly, you have to use the setter function "setCharacter".
+// A simple example using a dungeons and dragons game code:
+
+function App() {
+  const [character, setCharacter] = useState({
+    name: "Nimble",
+    class: "Rogue",
+    level: 1,
+  });
+
+  // here we're using the setter function by passing the previous state as an argument to the function. This way we can change the state without changing it directly. "grab the previous state and update it with the new value"
+  function levelUp() {
+    setCharacter((prevCharacter) => {
+      return { ...prevCharacter, level: prevCharacter.level + 1 };
+    });
+  }
+
+  return (
+    <div>
+      <h1>{character.name}</h1>
+      <h2>{character.class}</h2>
+      <h3>{character.level}</h3>
+      <button onClick={levelUp}>Level Up</button>
+    </div>
+  );
+}
+
+export default App;
+
+// So remember that the setter function can have a function or a value as an argument. If you pass a function as an argument, you can use the previous state to update the state. If you pass a value as an argument, you can update the state directly.
