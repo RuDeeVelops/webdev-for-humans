@@ -1,0 +1,18 @@
+<!-- Fluid responsive layout in Tailwind without jumpy breakpoints -->
+
+<div class="w-full max-w-[38rem]">
+  <!-- your awesome stuff -->
+</div>
+
+<!-- or using a min function in css -->
+
+<div class="w-[min(100%,38rem)]">
+  <!-- your awesome stuff -->
+</div>
+
+<!-- The difference between the two is that the first one will always be 38rem wide, while the second one will be 100% wide until it reaches 38rem, then it will stop growing. -->
+<!-- This is how to read the min function: min(100%,38rem) -->
+<!-- "Take the minimum value between 100% and 38rem" -->
+<!-- So if 100% is smaller than 38rem, it will take 100%, otherwise it will take 38rem. -->
+
+<!-- And the first one reads w-full means "take the full width of the parent container" and max-w-[38rem] means "take a maximum width of 38rem". So if it reaches the full width of the parent container, it will stop growing. -->
