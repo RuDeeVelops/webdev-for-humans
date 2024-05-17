@@ -1,0 +1,76 @@
+<!-- let's see a few classes that can be useful in Tailwind. These classes are not direct mappings to CSS properties, but they can be useful in many situations. Let's start with: container, size, divide, space, line-clamps, truncate, bg-gradient-to (with from, via and to), ring, animate-,    -->
+
+<!-- container -->
+<!-- The container class is used to center the content of a page. It sets a max-width and centers the content. -->
+<div class="container mx-auto">
+  <div class="bg-gray-200 p-6 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold text-gray-800">Centered Content</h1>
+    <p class="text-gray-600">This content is centered both vertically and horizontally.</p>
+  </div>
+</div>
+
+<!-- size -->
+<!-- The size class is used to set the width and height of an element. -->
+<div class="w-32 h-32 bg-gray-200 p-6 rounded-lg shadow-lg">
+  <h1 class="text-2xl font-bold text-gray-800">Size</h1>
+  <p class="text-gray-600">This element has a width and height of 32 pixels.</p>
+</div>
+
+<!-- divide -->
+<!-- The divide class is used to add a border between elements. -->
+<div class="divide-y divide-gray-200">
+  <div class="p-6">
+    <h1 class="text-2xl font-bold text-gray-800">Divide</h1>
+    <p class="text-gray-600">This element has a border at the bottom.</p>
+  </div>
+  <div class="p-6">
+    <h1 class="text-2xl font-bold text-gray-800">Divide</h1>
+    <p class="text-gray-600">This element has a border at the bottom.</p>
+  </div>
+</div>
+
+<!-- space -->
+<!-- The space class is used to add margin and padding to elements. -->
+<div class="space-y-6">
+  <div class="bg-gray-200 p-6 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold text-gray-800">Space</h1>
+    <p class="text-gray-600">This element has margin at the top and bottom.</p>
+  </div>
+  <div class="bg-gray-200 p-6 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold text-gray-800">Space</h1>
+    <p class="text-gray-600">This element has margin at the top and bottom.</p>
+  </div>
+</div>
+
+<!-- line-clamps -->
+<!-- The line-clamps class is used to truncate text after a certain number of lines. -->
+<div class="line-clamp-2">
+  <p class="text-gray-600">This text will be truncated after two lines.</p>
+</div>
+
+<!-- truncate -->
+<!-- The truncate class is used to truncate text with an ellipsis. -->
+<div class="truncate">
+  <p class="text-gray-600">This text will be truncated with an ellipsis.</p>
+</div>
+
+<!-- bg-gradient-to -->
+<!-- The bg-gradient-to class is used to add a gradient background to an element. -->
+<div class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-6 rounded-lg shadow-lg">
+  <h1 class="text-2xl font-bold text-white">Gradient</h1>
+  <p class="text-white">This element has a gradient background.</p>
+</div>
+
+<!-- ring -->
+<!-- The ring class is used to add a ring around an element. -->
+<div class="ring ring-blue-500 p-6 rounded-lg shadow-lg">
+  <h1 class="text-2xl font-bold text-gray-800">Ring</h1>
+  <p class="text-gray-600">This element has a ring around it.</p>
+</div>
+
+<!-- animate- -->
+<!-- The animate- class is used to add animations to elements. -->
+<div class="animate-pulse bg-gray-200 p-6 rounded-lg shadow-lg">
+  <h1 class="text-2xl font-bold text-gray-800">Animate</h1>
+  <p class="text-gray-600">This element has a pulse animation.</p>
+</div>
