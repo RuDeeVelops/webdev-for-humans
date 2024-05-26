@@ -19,15 +19,23 @@ datasource db {
   directUrl    = env("POSTGRES_URL_NON_POOLING")
   relationMode = "prisma"
 }
-model User {
-  id Int @id @default(autoincrement())
-}
+// your models
 
 
 ```
 
 - copy and paste whole content of `.env.development.local` file into `.env` file.
-- run `npx prisma db push`
+- run first baseline migration with `prisma migrate dev --name init`
+- insert this script in your `package.json`:
+
+```
+"scripts": {
+    "migrate": "prisma generate && prisma migrate deploy"
+  }
+```
+
+- run `npm run migrate`
+- run it everytime you make a change to your schema
 
 ## Docs
 
