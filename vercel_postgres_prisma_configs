@@ -1,0 +1,36 @@
+# How to configure Vercel Postgres database with Prisma
+
+- From [vercel.com](https://vercel.com/) create a database for your Vercel project
+- Follow the `getting started` quickstart below the `storage` tab
+- Once installed you need Prisma:
+- `npm install @prisma/client`
+- and then `npm install prisma --save-dev` for devDependancies
+- run `npx prisma init`
+- inside the new `schema.prisma` file paste the following (added a template for user schema):
+
+```prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "postgresql"
+  url          = env("POSTGRES_PRISMA_URL")
+  directUrl    = env("POSTGRES_URL_NON_POOLING")
+  relationMode = "prisma"
+}
+model User {
+  id Int @id @default(autoincrement())
+}
+
+
+```
+
+- copy and paste whole content of `.env.development.local` file into `.env` file.
+- run `npx prisma db push`
+
+## Docs
+
+https://vercel.com/docs/storage/vercel-postgres/using-an-orm
+https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration/introduction
+https://vercel.com/docs/storage/vercel-postgres/using-an-orm
