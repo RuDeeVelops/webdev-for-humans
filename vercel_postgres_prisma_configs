@@ -36,6 +36,25 @@ datasource db {
 
 - run `npm run migrate`
 - run it everytime you make a change to your schema
+- inside `utils` folder create a `db.ts` file and paste the following, read docs here to understand why(https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices):
+
+```
+import { PrismaClient } from '@prisma/client'
+
+const prismaClientSingleton = () => {
+  return new PrismaClient()
+}
+
+declare const globalThis: {
+  prismaGlobal: ReturnType<typeof prismaClientSingleton>;
+} & typeof global;
+
+const prisma = globalThis.prismaGlobal ?? prismaClientSingleton()
+
+export default prisma
+
+if (process.env.NODE_ENV !== 'production') globalThis.prismaGlobal = prisma
+```
 
 ## Docs
 
