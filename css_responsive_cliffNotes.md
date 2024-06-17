@@ -6,6 +6,7 @@
 - Use unitless `line-height` of `1.5` to ensure consistent spacing relative to the `font-size`.
 - Use percentages for `width`, `height`, and other layout properties to ensure flexibility and responsiveness.
 - Use `px` for `max-width`, `border-width`, `box-shadow`, and other properties that require fixed values.
+- Use `.max-w-full` `.h-auto` in Tailwind for responsive images plus a combination of `object-contain, object-cover and object-fill`
 
 ## Optionals
 
