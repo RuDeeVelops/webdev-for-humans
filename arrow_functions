@@ -1,0 +1,41 @@
+// arrow functions return rules - from https://medium.com/@bunlong/arrow-functions-return-rules-in-javascript-b63ed5f25994
+
+// Explicit
+// Single-line
+const explicit = (value) => { return value; }
+
+// Multi-line
+const explicit = (value) => {
+  return value;
+}
+
+// Implicit
+// Single-line
+const implicit = (value) => value;
+
+// Multi-line
+const implicit = (value) => (
+  value
+);
+
+// When using implicit returns, object literals must be wrapped in parenthesis so that the curly braces are not mistaken for the opening of the function’s body.
+
+const implicit = () => { value: 1 };
+implicit(); // undefined
+
+const implicit = () => ({ value: 1 });
+implicit(); // { value: 1 }
+
+
+// Parens Rules
+// Arrow functions can omit parentheses when they have exactly one parameter.
+
+// Arrow Functions, with parentheses
+const myFunction = (p) => {}
+
+// Arrow Functions, without parentheses
+const myFunction = p => {}
+In all other cases (multiple parameters), the parameter(s) must be wrapped in parentheses.
+
+// Arrow Function, with parentheses
+const myFunction = (p1, p2) => {}
